@@ -609,7 +609,7 @@ describe("MenuOverlay", () => {
     const iframe = document.createElement('iframe');
     document.body.appendChild(iframe);
     iframe.focus();
-    element.handleIframeClick();
+    element.handleWindowBlurEvent();
     await nextFrame();
 
     expect(element.isOpen).toBeFalsy();
@@ -625,7 +625,7 @@ describe("MenuOverlay", () => {
     const iframe = document.createElement('iframe');
     document.body.appendChild(iframe);
     iframe.focus();
-    element.handleIframeClick();
+    element.handleWindowBlurEvent();
     await nextFrame();
 
     expect(element.isOpen).toBeFalsy();
