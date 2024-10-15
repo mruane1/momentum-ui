@@ -2,8 +2,7 @@ name: Test Workflow
 
 on: 
   push:
-    branches:
-      - "CX-16614-GITHUB-ACTIONS-STORYBOOK"
+    branches: [ "CX-16614-GITHUB-ACTIONS-STORYBOOK" ]
 
 jobs:
   test:
