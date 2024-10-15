@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Hello Mossy
 
 # Controls when the workflow will run
 on:
@@ -27,7 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo Hello, mossy!
+        run: echo Hello, Github Actions are working on PR!
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
