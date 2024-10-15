@@ -28,18 +28,12 @@ jobs:
         with:
           node-version: '20'
 
-      - name: List Web Components Directory
-        run: ls ./web-components
-
       - name: Install Dependencies
         run: cd ./web-components && yarn install
 
-      - name: Build Command
-        run: cd ./web-components && yarn storybook:dist
-
       - uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
         with:
-          install_command: yarn install # default: npm ci
+          install_command: yarn install
           build_command: yarn storybook:wc-dist
-          path: ./web-components/storybook-static # default: dist/storybook
+          path: ./web-components/.out
           checkout: false
