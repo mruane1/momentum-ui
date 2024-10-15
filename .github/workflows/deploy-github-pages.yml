@@ -35,11 +35,11 @@ jobs:
         run: cd ./web-components && yarn install
 
       - name: Build Command
-        run: cd ./web-components && yarn storybook:build
+        run: cd ./web-components && yarn storybook:dist
 
       - uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
         with:
           install_command: yarn install # default: npm ci
-          build_command: yarn storybook:wc-build
+          build_command: yarn storybook:wc-dist
           path: ./web-components/storybook-static # default: dist/storybook
           checkout: false
